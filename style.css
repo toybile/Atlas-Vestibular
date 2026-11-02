@@ -52,3 +52,8 @@ input[type=range]{appearance:none;-webkit-appearance:none;display:block;width:10
 @media(max-width:620px){.top-actions #method-button{font-size:0}.top-actions #method-button:before{content:'Método';font-size:calc(10px * var(--text-scale))}}
 
 @media(min-width:1101px){.page-heading>div{max-width:max(240px,calc(100vw - 2 * (var(--rail-width) + 48px)))}}
+
+/* Persistent navigation; translucency only after the page starts scrolling. */
+.topbar.shell{position:sticky;top:0;z-index:50;background:var(--bg);transition:background .25s,border-color .25s,box-shadow .25s;isolation:isolate}.topbar::before{content:'';position:absolute;inset:0 -24px;z-index:-1;background:var(--bg);transition:background .25s,box-shadow .25s;pointer-events:none}.topbar.scrolled{background:transparent;border-color:color-mix(in srgb,var(--line-strong) 65%,transparent)}.topbar.scrolled::before{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 5px 24px #181a2c08}.chart-head{justify-content:flex-start}.chart-head>div:first-child{text-align:left;padding:0 150px 0 0}.chart-head .eyebrow{justify-content:flex-start}
+@media(max-width:620px){.topbar::before{inset:0 -12px}.chart-head{align-items:stretch}.chart-head>div:first-child{padding:0}.chart-head .view-mode{align-self:flex-end}}
+@media(prefers-reduced-motion:reduce){.topbar,.topbar::before{transition:none}}

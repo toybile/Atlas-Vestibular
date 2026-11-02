@@ -54,3 +54,6 @@ $$('select').forEach(select=>{const frame=document.createElement('div');frame.cl
 $('#context').addEventListener('change',e=>{if(e.target.id==='context-year')state.year=e.target.value;else if(e.target.id==='context-mode')state.mode=e.target.value;else if(e.target.id==='context-ranking')state.ranking=e.target.value;else return;render()});
 $('#choose-fuvest').addEventListener('click',()=>{$('.exam-switch').open=false;$('.exam-switch summary').focus()});
 document.addEventListener('click',e=>{if(!e.target.closest('.exam-switch'))$('.exam-switch').open=false});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('.exam-switch').open){$('.exam-switch').open=false;$('.exam-switch summary').focus()}});
+
+function syncHeaderScroll(){document.querySelector('.topbar').classList.toggle('scrolled',window.scrollY>8)}
+window.addEventListener('scroll',syncHeaderScroll,{passive:true});syncHeaderScroll();
