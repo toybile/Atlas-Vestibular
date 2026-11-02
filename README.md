@@ -1,38 +1,68 @@
-# FUVEST: Cortes e Concorrência
+# Cortes e Concorrência · FUVEST e ENEM
 
-Site interativo para explorar notas de corte da primeira fase da FUVEST de **2023 a 2026**, nas modalidades **AC, EP e PPI**.
+Versão de 02/11/2026, **somente local**. Nenhum envio ao GitHub, Pages ou Sites GPT.
 
-**Site:** https://toybile.github.io/FUVEST-Cortes-e-Concorrencia/
+## Abrir
 
-## Uso
+Dê dois cliques em `Abrir site.cmd`. O servidor atende apenas em `http://127.0.0.1:8767/`. Alternativa: `python -m http.server 8767 --bind 127.0.0.1`, nesta pasta. Abrir o HTML diretamente não permite carregar as bases.
 
-- Padrão: 2026, AC, Top 10, empates incluídos e sem linha de referência.
-- Seleção por corte ou inscritos da modalidade por vaga; quantidade configurável e busca no recorte.
-- Linha opcional em percentual ou acertos sobre 90 ou 80 questões; a escala de 80 serve apenas para comparação com 2027.
-- Gráfico e tabela; botão único Exportar com PDF da visualização ativa e dados em CSV.
-- Temas claro e escuro, fonte ajustável e filtros recolhíveis no celular.
-- Barra lateral fixa e centralizada verticalmente no computador, com rolagem interna quando necessário.
+## Cobertura real
 
-## Estrutura e publicação
+| Conjunto | Dados incorporados | Limites |
+| --- | --- | --- |
+| FUVEST | Cortes 1994–2026; tabela histórica USP 1987–1993; 3.483 registros carreira/edição | 1987–1993 têm cobertura parcial. 1977–1986 sem cortes validados. 2027 em andamento. |
+| ENEM: inscrições | 1998–2025, Brasil, cinco regiões e 27 UFs | 1998–2008 vêm da série retrospectiva do Relatório Pedagógico 2008; não são notas. |
+| ENEM: desempenho | 2009–2025, cinco áreas, Brasil/regiões/UFs | População própria por área; 2009/2010 também têm Exterior. Desempenho anterior a 2009 não estruturado. 2026 ainda sem resultados. |
+| SiSU | 2010–2025, 635.255 registros de relatórios agregados, com semestre identificado | Cópias públicas atribuídas ao MEC, sem verificação binária contra a origem. Relatório 2026 não obtido. |
+| ENEM-USP | Primeira chamada de 2024, 2025 e 2026 | Notas da primeira chamada de 2023 ainda não validadas. Sem estimar vagas/inscrições ausentes. |
+| FUVEST: QASE | 2024/2025, total das carreiras, 34/38 perguntas com contagens validadas e mais um agrupamento por Grandes Regiões | Inclui treineiros; denominador por pergunta. Não é desempenho na prova. |
 
-HTML, CSS e JavaScript estáticos na raiz, sem instalação ou compilação. GitHub Pages publica a raiz da branch `main`; `.nojekyll` evita processamento pelo Jekyll. Basta enviar commits para `main` para atualizar a publicação. Sites GPT não participa mais do fluxo.
+Os seletores inventariam também as lacunas, identificadas como sem dados, sem cortes validados ou aguardando resultados. Isso não representa ausência de cursos nem notas iguais a zero. Os dados não permitem afirmar que todos os cortes desde a criação da FUVEST estão disponíveis.
 
-Para testar localmente: `python -m http.server 8000` e abra `http://localhost:8000`.
+## Exploração
 
-`data.json` contém os registros e as fontes por edição; `pdf-export.js` gera PDFs no navegador; `fonts/` e `vendor/` incluem dependências locais e suas licenças. Nenhuma credencial é necessária para executar o site. As preferências de tema e fonte ficam somente no navegador; os filtros são preservados no endereço.
+- O menu superior diferencia FUVEST (violeta) e ENEM (verde-petróleo), com nomes e indicação textual do exame ativo.
+- ENEM: notas por área, comparação entre 27 estados e cinco regiões, série de desempenho desde 2009, faixas de nota, inscritos por território e evolução das inscrições desde 1998. Perfil/presença: sexo, cor/raça, idade e escolaridade, conforme tabelas disponíveis em cada ano.
+- FUVEST: cortes/concorrência ou estatísticas/perfil. O QASE permite estado de residência, Grandes Regiões calculadas a partir das UFs, regiões imediatas/intermediárias de origem, idade, renda, escolaridade e demais perguntas com totais consistentes.
+- SiSU/ENEM-USP: processo, edição, modalidade original, UF, instituição e curso/campus antes do Top; busca adicional dentro do Top. Últimas edições combina somente a mais recente incorporada de cada processo. Cada linha e exportação identifica processo, ano, semestre quando houver e modalidade.
+- Dados de ingresso são carregados por edição, sob demanda. O navegador não baixa 635 mil registros ao abrir o site.
+- Gráfico/tabela, PDF da visualização selecionada, CSV, temas, fontes ajustáveis e filtros no endereço permanecem disponíveis. PDFs alinham o centro do bloco de texto, números e barra na mesma altura e centralizam células numéricas.
 
 ## Método
 
-341 registros de carreira/edição: 107 de 2023, 85 de 2024, 75 de 2025 e 74 de 2026. As edições são tratadas separadamente, pois nomes, códigos e agrupamentos mudam. Treineiros são excluídos. Os totais de vagas conferem com os documentos oficiais menos 600 vagas de treineiros: 8.230 em 2023 e 8.147 em cada edição de 2024 a 2026.
+Cada linha tem uma unidade definida: carreira/edição/modalidade (FUVEST), oferta/campus/turno/modalidade/semestre (SiSU), curso/unidade/turno/modalidade/chamada (ENEM-USP), área/território/população (desempenho ENEM) ou resposta/pergunta/população (perfil).
 
-Percentual do corte = pontos / 90 × 100. Inscritos por vaga = inscritos da modalidade / vagas da mesma modalidade; esse quociente não é a coluna de convocados por vaga nem uma probabilidade de aprovação. Atingir o corte histórico não garante convocação futura ou matrícula. Valores ausentes não são convertidos em zero.
+Não fundimos automaticamente modalidades de épocas e processos diferentes. Antes de 2019, FUVEST usa Geral conforme a fonte. No SiSU, categorias amplas L/V/B podem conter critérios diferentes por oferta; o detalhe preserva a descrição original. Não rebatizamos as categorias históricas com cotas atuais.
 
-Os links oficiais e os SHA-256 dos PDFs de origem estão em `data.json`. As fontes também estão disponíveis no site em Método e fontes. Interface independente, sem vínculo institucional com USP/FUVEST.
+FUVEST 1987–1993 preserva a base publicada por carreira, inclusive escalas diferentes. Repetições idênticas da mesma carreira em grupos da tabela aparecem uma vez; `sourceOccurrences` registra as ocorrências. A extensão do gráfico é uma referência visual, não normalização de escalas. A base histórica aparece no detalhe/CSV. Até 2002 não há conversão geral em acertos ou percentual. Nas edições com base validada, percentual = pontos/base × 100; bônus e aproveitamento do ENEM variaram, portanto isso não é necessariamente proporção de acertos.
 
-## Licenças de terceiros
+Média e distribuição não determinam causalmente dificuldade ou qualidade educacional. Populações mudam entre áreas, territórios e anos. As provas objetivas do ENEM usam TRI, sem conversão direta entre acertos e nota. A escala de 1.000 no gráfico é referência de exibição, não teto universal da TRI. A estrutura anterior a 2009, de prova objetiva/redação em escala de 0–100, não foi fundida à série moderna.
 
-jsPDF 4.2.1: `vendor/JSPDF-LICENSE.txt`. Lato: `fonts/OFL.txt`.
+Proporções são calculadas das contagens: contagem/n × 100. Só foram incorporadas partições de perfil/distribuição cuja soma corresponde ao denominador publicado. Categorias como cor/raça são as declaradas na fonte; não são explicações causais de desempenho. O QASE representa inscritos que responderam à pergunta, incluindo treineiros no Total das Carreiras. Não representa a população brasileira. O agrupamento em Grandes Regiões usa o estado de residência; não é nota média regional.
 
-## Navegação e layout
-Ano, modalidade e critério de ordenação também podem ser alterados pelos seletores acima do gráfico, sincronizados com a barra lateral e os parâmetros do endereço. A marca abre um seletor de concurso; somente FUVEST está ativa, e ENEM aparece desabilitado como opção futura, sem dados incorporados. O cabeçalho ocupa a largura da página, os títulos ficam centralizados e a barra lateral é centralizada na área visível abaixo do cabeçalho. Barras de rolagem finas e discretas nos temas claro e escuro.
+Valores ausentes permanecem ausentes. Relatórios SiSU 2010–2018 não informam UF, município, vagas ou inscrições: esses campos permanecem null e a UF aparece como Não informada. Não deduzimos UF pelo nome de campus. Cortes zero/ausentes não entram no ranking SiSU, mas ficam na base. FUVEST 2021 é uma fonte de cortes apenas, e zeros nela indicam corte não informado. Não inferimos vagas a partir de razões arredondadas. Inscrições/vaga não é probabilidade de aprovação.
 
+## Proveniência e reconstrução
+
+- FUVEST: PDFs oficiais e [tabela histórica NAEG/USP hospedada na FFCLRP](https://www.ffclrp.usp.br/divulgacao/graduacao/NotaCorteFUVEST.htm).
+- ENEM: [sinopses oficiais Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/sinopses-estatisticas/enem), desempenho 7.x.1 (6.x.1 em 2010), distribuição 7.x.2/6.x.2 e perfis da seção 1. Relatório Pedagógico 2008, página impressa 43, para inscrições 1998–2008.
+- QASE: PDFs oficiais `fuvest_2024_qase_inscritos_carreira.pdf` e `fuvest_2025_qase_inscritos_carreira.pdf`; somente páginas Total das Carreiras, sem somar carreiras repetidas.
+- SiSU: relatórios agregados obtidos no repositório público [maiakanegae/sisu-data](https://github.com/maiakanegae/sisu-data). Procedência, download e SHA-256 preservados. Nenhuma lista individual utilizada.
+- ENEM-USP: PDFs oficiais da primeira chamada. Página, classificação publicada, fonte e SHA-256 preservados por edição. Ausência de município explícito na unidade permanece null, sem atribuir automaticamente São Paulo.
+
+`coverage.json` inventaria as edições e lacunas. `admissions-index.json` direciona os arquivos anuais em `admissions/`. Arquivos de origem estão na pasta irmã `../history-sources`, fora do servidor.
+
+Para reconstruir com as origens já baixadas e as dependências de `requirements-data.txt`, execute nesta ordem:
+
+```text
+python tools/import_data.py --sources ../history-sources
+python tools/import_enem_usp.py --pdf ../history-sources/enem-usp-2026-chamada1.pdf
+python tools/expand_history.py
+python tools/expand_admissions.py
+python tools/finalize_data.py
+node tools/verify_data.cjs
+```
+
+Os importadores não fazem downloads nem enviam arquivos. A verificação confere totais por território, partições e denominadores, ausência de estimativas nos campos históricos, identificadores e coexistência de processos no mesmo ano. A revisão local incluiu desktop/celular e renderização de oito PDFs dos novos recortes.
+
+Dependências de exportação locais: jsPDF e Lato, com licenças em `vendor/` e `fonts/`. Interface independente, sem vínculo institucional com USP, FUVEST, MEC ou Inep. Não estima aprovação.

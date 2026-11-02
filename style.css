@@ -57,3 +57,54 @@ input[type=range]{appearance:none;-webkit-appearance:none;display:block;width:10
 .topbar.shell{position:sticky;top:0;z-index:50;background:var(--bg);transition:background .25s,border-color .25s,box-shadow .25s;isolation:isolate}.topbar::before{content:'';position:absolute;inset:0 -24px;z-index:-1;background:var(--bg);transition:background .25s,box-shadow .25s;pointer-events:none}.topbar.scrolled{background:transparent;border-color:color-mix(in srgb,var(--line-strong) 65%,transparent)}.topbar.scrolled::before{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);box-shadow:0 5px 24px #181a2c08}.chart-head{justify-content:flex-start}.chart-head>div:first-child{text-align:left;padding:0 150px 0 0}.chart-head .eyebrow{justify-content:flex-start}
 @media(max-width:620px){.topbar::before{inset:0 -12px}.chart-head{align-items:stretch}.chart-head>div:first-child{padding:0}.chart-head .view-mode{align-self:flex-end}}
 @media(prefers-reduced-motion:reduce){.topbar,.topbar::before{transition:none}}
+/* Shared historical and ENEM explorer controls. */
+.exam-subview{padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+#sisu-filters .field,#stats-filters .field{margin-bottom:17px}
+#course-filter{width:100%;padding:12px;border:1px solid var(--line-strong);background:var(--soft);border-radius:10px;outline-offset:3px}
+#mode-select,#institution-filter,#geo-filter{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;max-width:100%}
+.select-frame{min-width:0;max-width:100%}
+.coverage-note{padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--soft);line-height:1.7}
+#source-provenance{overflow-wrap:anywhere}.career-label small{line-height:1.5;overflow-wrap:anywhere}
+.exam-menu button[aria-current=true]{border-color:var(--violet);background:var(--violet-light)}
+.chart-row .value strong{overflow-wrap:anywhere}.table-scroll td:nth-child(2){min-width:210px}
+@media(max-width:620px){.context-choice .select-frame{max-width:130px}.context-choice select{max-width:130px}.chart-head h2{overflow-wrap:normal}.coverage-note{font-size:calc(12px * var(--text-scale));padding:14px}}
+/* Quiet scrollbars: neutral thumb, transparent track, no arrow buttons. */
+*{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--ink) 22%,transparent) transparent}
+.rail{scrollbar-color:color-mix(in srgb,var(--ink) 22%,transparent) transparent}
+@supports selector(::-webkit-scrollbar){
+ *,.rail{scrollbar-width:auto;scrollbar-color:auto}
+ *::-webkit-scrollbar{width:5px;height:5px}
+ *::-webkit-scrollbar-track,*::-webkit-scrollbar-corner{background:transparent}
+ *::-webkit-scrollbar-button{display:none;width:0;height:0}
+ *::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ink) 22%,transparent);border:1px solid transparent;background-clip:padding-box;border-radius:999px}
+ *::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--ink) 38%,transparent);background-clip:padding-box}
+}
+.admission-badge{display:flex;align-items:center;gap:4px;width:max-content;max-width:100%;margin:5px 0;color:var(--violet);font-size:calc(10px * var(--text-scale));font-weight:650;line-height:1.5;flex-wrap:wrap}
+.admission-badge:before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;margin-right:2px}
+.admission-badge[data-process="enem-usp"]{color:#25746b}
+.admission-badge span{color:var(--muted);font-weight:500}
+#admissions-scope .field{margin-bottom:20px}#admission-process{max-width:100%;text-overflow:ellipsis}
+@media(forced-colors:active){*{scrollbar-color:auto;scrollbar-width:auto}.admission-badge{color:CanvasText}}
+
+html[data-theme=dark] .admission-badge[data-process="enem-usp"]{color:#7ac8b7}
+/* Exam identities remain distinguishable by name, active check and accent. */
+.exam-menu #choose-fuvest{--exam-accent:#6956ef;--exam-tint:#f0edff}
+.exam-menu #choose-enem{--exam-accent:#087d78;--exam-tint:#e6f5f2}
+.exam-menu button{border:1px solid transparent!important;border-left:3px solid var(--exam-accent)!important;background:var(--surface);margin-bottom:5px;transition:background .18s,transform .18s}
+.exam-menu button[aria-current=false]{background:var(--surface);color:var(--ink)}
+.exam-menu button:hover,.exam-menu button[aria-current=true]{background:var(--exam-tint);color:var(--exam-accent);border-color:color-mix(in srgb,var(--exam-accent) 28%,transparent)!important;border-left-color:var(--exam-accent)!important}
+.exam-menu strong{color:var(--exam-accent)}.exam-menu .exam-state{border:1px solid color-mix(in srgb,var(--exam-accent) 25%,transparent);border-radius:20px;padding:4px 7px}
+html[data-exam=enem]{--violet:#087d78;--violet-light:#e6f5f2}
+html[data-exam=enem] .brand-mark{background:#087d78}
+html[data-exam=fuvest] .brand-mark{background:#6956ef}
+html[data-theme=dark][data-exam=enem]{--violet:#73d4c6;--violet-light:#153933}
+html[data-theme=dark] .exam-menu #choose-enem{--exam-accent:#73d4c6;--exam-tint:#153933}
+html[data-theme=dark] .exam-menu #choose-fuvest{--exam-accent:#ae9eff;--exam-tint:#29233f}
+.stat-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0 0 18px;background:var(--line)}
+.stat-summary>div{background:var(--surface);padding:15px 20px;display:grid;gap:4px;min-width:0}
+.stat-summary span{font-size:calc(11px * var(--text-scale));color:var(--muted)}
+.stat-summary strong{font-size:calc(16px * var(--text-scale));font-weight:600;letter-spacing:-.025em;overflow-wrap:anywhere}
+#stat-summary+ .chart-card .chart-head h2{max-width:850px}
+#stats-filters .select-frame select{white-space:normal;text-overflow:ellipsis}
+@media(max-width:620px){.stat-summary{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:10px}.stat-summary>div{padding:12px 15px}.stat-summary strong{font-size:calc(14px * var(--text-scale))}}
+@media(prefers-reduced-motion:reduce){.exam-menu button{transition:none}}
