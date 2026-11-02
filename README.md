@@ -32,3 +32,7 @@ Os links oficiais e os SHA-256 dos PDFs de origem estão em `data.json`. As font
 ## Licenças de terceiros
 
 jsPDF 4.2.1: `vendor/JSPDF-LICENSE.txt`. Lato: `fonts/OFL.txt`.
+
+## Navegação e layout
+Ano, modalidade e critério de ordenação também podem ser alterados pelos seletores acima do gráfico, sincronizados com a barra lateral e os parâmetros do endereço. A marca abre um seletor de concurso; somente FUVEST está ativa, e ENEM aparece desabilitado como opção futura, sem dados incorporados. O cabeçalho ocupa a largura da página, os títulos ficam centralizados e a barra lateral é centralizada na área visível abaixo do cabeçalho. Barras de rolagem finas e discretas nos temas claro e escuro.
+
