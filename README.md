@@ -96,3 +96,7 @@ Os endereços externos únicos das bases, interface e documentação são verifi
 O endereço de cotas PcD da UNICENTRO citado literalmente nos relatórios SiSU 2025/2026 retornou 404. A transcrição original é preservada e o detalhe apresenta acesso ao portal atual da instituição. O Jornal da USP pode restringir consultas automatizadas. O arquivo Inep 2017 pode apresentar falhas temporárias; sua referência oficial é mantida.
 
 Os vestibulares identificados como “Em breve” no menu ainda não possuem dados incorporados e não são opções ativas.
+
+## Personalização da visualização
+
+O botão “Personalizar” oferece os modos Essencial e Detalhada e a seleção de campos adicionais. A escolha vale para gráfico, tabela e PDF, é preservada por tipo de dado no navegador e acompanha o link compartilhado. As opções sem valores incorporados são identificadas; valores ausentes permanecem “—”. O CSV continua oferecendo os campos da base para análise.
