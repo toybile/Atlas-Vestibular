@@ -30,7 +30,7 @@
   if(kind==='chart')axis();else tableHeader();
   s.rows.forEach((r,index)=>{
    const presentation=s.presentation?.rows[index];
-   const label=wrap(presentation?presentation.cells[1]:r.label+(sisu&&r.subtitle?' · '+r.subtitle:''),kind==='chart'?plotX-M-54:widths[1]-14,10);
+   const label=wrap(presentation?presentation.cells[1]+(kind==='chart'&&sisu?' · '+r.processName+' '+r.year+' / '+r.mode:''):r.label+(sisu&&r.subtitle?' · '+r.subtitle:''),kind==='chart'?plotX-M-54:widths[1]-14,10);
    const details=kind==='chart'?wrap(presentation?presentation.details.join(' · '):stats?'n = '+fmt(r.n,0):'',plotX-M-54,8):[];
    const labelHeight=label.length*13,detailHeight=details.length*10;
    const cellHeight=presentation&&kind!=='chart'?Math.max(...presentation.cells.map((v,i)=>wrap(v,widths[i]-14,i===1?10:9).length*(i===1?13:12))):0;
