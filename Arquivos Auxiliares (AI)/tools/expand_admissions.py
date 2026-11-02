@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,re,hashlib,openpyxl,sys
 from pypdf import PdfReader
-sys.stdout.reconfigure(encoding='utf8');site=Path(__file__).resolve().parents[1];src=site.parent/'history-sources'
+sys.stdout.reconfigure(encoding='utf8');site=(Path(__file__).resolve().parents[2]/'Arquivos Principais');src=site.parent.parent/'history-sources'
 def save(name,d):
  p=site/name;p.parent.mkdir(exist_ok=True,parents=True);p.write_text(json.dumps(d,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -40,7 +40,7 @@ for year,e in byyear.items():
  print(year,len(e['rows']))
 save('admissions-index.json',index)
 # ENEM-USP 2024/2025 layout; 2026 existing validated extraction.
-usp=json.loads((site/'enem-usp.json').read_text(encoding='utf8'));modes=usp['2026']['modalities']
+usp=json.loads((site.parent/'Arquivos Auxiliares (AI)'/'enem-usp.json').read_text(encoding='utf8'));modes=usp['2026']['modalities']
 for year in ['2024','2025']:
  p=src/f'enem-usp-{year}-chamada1.pdf';records=[]
  for page,pg in enumerate(PdfReader(p).pages,1):

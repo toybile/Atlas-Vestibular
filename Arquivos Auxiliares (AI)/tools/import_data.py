@@ -3,11 +3,11 @@ from pypdf import PdfReader
 import re,json,hashlib,zipfile,io,openpyxl,sys,argparse
 sys.stdout.reconfigure(encoding='utf-8')
 parser=argparse.ArgumentParser(description='Importar PDFs FUVEST, sinopses Inep e relatório agregado SiSU já baixados.')
-parser.add_argument('--sources',type=Path,default=Path(__file__).resolve().parents[2]/'history-sources')
-parser.add_argument('--site',type=Path,default=Path(__file__).resolve().parents[1])
+parser.add_argument('--sources',type=Path,default=Path(__file__).resolve().parents[3]/'history-sources')
+parser.add_argument('--site',type=Path,default=(Path(__file__).resolve().parents[2]/'Arquivos Principais'))
 args=parser.parse_args();SRC=args.sources;SITE=args.site
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def write(name,data):(SITE/name).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf8')
+def write(name,data):((SITE.parent/'Arquivos Auxiliares (AI)'/name) if name=='sisu.json' else (SITE/name)).write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 data=json.loads((SITE/'data.json').read_text(encoding='utf8'))
 def stats(cut=None,vac=None,ins=None,absent=None,called=None,maximum=None):
  return dict(cut=cut,vacancies=vac,applicants=ins,absent=absent,called=called,maximum=maximum,ratio=ins/vac if ins is not None and vac else None)

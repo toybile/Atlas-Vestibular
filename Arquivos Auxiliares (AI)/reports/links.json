@@ -1,0 +1,1001 @@
+{
+  "checkedOn": "2026-11-02",
+  "method": "GET limitado ao início da resposta; bloqueios de acesso e falhas de rede não comprovam remoção da fonte.",
+  "total": 97,
+  "results": [
+    {
+      "url": "http://127.0.0.1:8767/",
+      "files": [
+        "README.md"
+      ],
+      "status": 200,
+      "finalUrl": "http://127.0.0.1:8767/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "http://download.inep.gov.br/educacao_basica/enem/relatorios_pedagogicos/relatorio_pedagogico_enem_2008.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "http://download.inep.gov.br/educacao_basica/enem/relatorios_pedagogicos/relatorio_pedagogico_enem_2008.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "http://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2025/sinopse_enem_2025.zip",
+      "files": [
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "http://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2025/sinopse_enem_2025.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "http://www.w3.org/2000/svg",
+      "files": [
+        "Arquivos Principais\\style.css"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.w3.org/2000/svg",
+      "contentType": "text/html; charset=iso-8859-1"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2009/Sinopse_Enem2009.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2009/Sinopse_Enem2009.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2010/Sinopse_Enem2010.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2010/Sinopse_Enem2010.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2011/Sinopse_Enem2011.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2011/Sinopse_Enem2011.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2012/Sinopse_Enem2012.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2012/Sinopse_Enem2012.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2013/Sinopse_Enem2013.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2013/Sinopse_Enem2013.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2014/Sinopse_Enem2014.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2014/Sinopse_Enem2014.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2015/Sinopse_Enem2015.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2015/Sinopse_Enem2015.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2016/Sinopse_Enem2016.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2016/Sinopse_Enem2016.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2017/Sinopse_Enem2017.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2017/Sinopse_Enem2017.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2018/Sinopse_Enem2018.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2018/Sinopse_Enem2018.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2019/Sinopse_ENEM2019.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2019/Sinopse_ENEM2019.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2020/Sinopse_Enem2020.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2020/Sinopse_Enem2020.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2021/sinopse_enem_2021.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2021/sinopse_enem_2021.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2022/sinopse_enem_2022.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2022/sinopse_enem_2022.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2023/sinopse_enem_2023.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2023/sinopse_enem_2023.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2024/sinopse_enem_2024.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2024/sinopse_enem_2024.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2025/sinopse_enem_2025.zip",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://download.inep.gov.br/informacoes_estatisticas/sinopses_estatisticas/sinopses_enem/2025/sinopse_enem_2025.zip",
+      "contentType": "application/zip"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap",
+      "files": [
+        "Arquivos Principais\\style.css"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap",
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://github.com/maiakanegae/sisu-data",
+      "files": [
+        "README.md"
+      ],
+      "status": 206,
+      "finalUrl": "https://github.com/maiakanegae/sisu-data",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://jornal.usp.br/universidade/enem-usp-candidatos-podem-consultar-indicacao-de-nota-minima-e-alterar-opcao-de-curso/",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\coverage.json",
+        "README.md"
+      ],
+      "status": 403,
+      "error": "Forbidden"
+    },
+    {
+      "url": "https://prg.usp.br/estude-na-usp/sisu/",
+      "files": [
+        "Arquivos Principais\\enem-admissions.js",
+        "README.md"
+      ],
+      "status": 200,
+      "finalUrl": "https://prg.usp.br/estude-na-usp/sisu/",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/PORTAL_Sisu%202010%20a%202018_Nota%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2010.json",
+        "Arquivos Principais\\admissions\\sisu-2011.json",
+        "Arquivos Principais\\admissions\\sisu-2012.json",
+        "Arquivos Principais\\admissions\\sisu-2013.json",
+        "Arquivos Principais\\admissions\\sisu-2014.json",
+        "Arquivos Principais\\admissions\\sisu-2015.json",
+        "Arquivos Principais\\admissions\\sisu-2016.json",
+        "Arquivos Principais\\admissions\\sisu-2017.json",
+        "Arquivos Principais\\admissions\\sisu-2018.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/PORTAL_Sisu%202010%20a%202018_Nota%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu%202023-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2023.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu%202023-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202019-1.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2019.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202019-1.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202019-2.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2019.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202019-2.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202022-1.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2022.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte_Sisu%202022-1.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202020-1_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2020.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202020-1_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202020-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2020.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202020-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202021-1_Inscri%C3%A7%C3%B5es%20e%20nota%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2021.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202021-1_Inscri%C3%A7%C3%B5es%20e%20nota%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202021_2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2021.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202021_2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202022-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2022.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202022-2_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202023-1_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2023.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202023-1_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202024_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2024.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202024_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202025_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2025.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://raw.githubusercontent.com/maiakanegae/sisu-data/main/data/relatorios/Portal%20Sisu_Sisu%202025_Inscri%C3%A7%C3%B5es%20e%20notas%20de%20corte.xlsx",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://sisu.mec.gov.br/",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2010.json",
+        "Arquivos Principais\\admissions\\sisu-2011.json",
+        "Arquivos Principais\\admissions\\sisu-2012.json",
+        "Arquivos Principais\\admissions\\sisu-2013.json",
+        "Arquivos Principais\\admissions\\sisu-2014.json",
+        "Arquivos Principais\\admissions\\sisu-2015.json",
+        "Arquivos Principais\\admissions\\sisu-2016.json",
+        "Arquivos Principais\\admissions\\sisu-2017.json",
+        "Arquivos Principais\\admissions\\sisu-2018.json",
+        "Arquivos Principais\\admissions\\sisu-2019.json",
+        "Arquivos Principais\\admissions\\sisu-2020.json",
+        "Arquivos Principais\\admissions\\sisu-2021.json",
+        "Arquivos Principais\\admissions\\sisu-2022.json",
+        "Arquivos Principais\\admissions\\sisu-2023.json",
+        "Arquivos Principais\\admissions\\sisu-2024.json",
+        "Arquivos Principais\\admissions\\sisu-2025.json",
+        "Arquivos Principais\\admissions\\sisu-2026.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://sisu.mec.gov.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://sisu.mec.gov.br/static/pdf/Portal",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\sisu-2026.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 200,
+      "finalUrl": "https://sisu.mec.gov.br/static/pdf/Portal",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://sisu.mec.gov.br/static/pdf/json_arquivos.json",
+      "files": [
+        "README.md"
+      ],
+      "status": 206,
+      "finalUrl": "https://sisu.mec.gov.br/static/pdf/json_arquivos.json",
+      "contentType": "application/octet-stream"
+    },
+    {
+      "url": "https://toybile.github.io/FUVEST-Cortes-e-Concorrencia/",
+      "files": [
+        "README.md"
+      ],
+      "status": 206,
+      "finalUrl": "https://toybile.github.io/FUVEST-Cortes-e-Concorrencia/",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.ffclrp.usp.br/divulgacao/graduacao/NotaCorteFUVEST.htm",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json",
+        "README.md"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.ffclrp.usp.br/divulgacao/graduacao/NotaCorteFUVEST.htm",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1977/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1978/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1979/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1980/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1981/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1982/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1983/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1984/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1985/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/acervo-vestibular-1986/",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://fuvest.br/",
+      "contentType": "text/html"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/enem_usp_2024_notas_minimas_classificacao_aprovado_chamada_1.pdf",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\usp-2024.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/enem_usp_2024_notas_minimas_classificacao_aprovado_chamada_1.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/enem_usp_2025_notas_minimas_aprovado_chamada_1.pdf",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\usp-2025.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/enem_usp_2025_notas_minimas_aprovado_chamada_1.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/enem_usp_2026_notas_minimas_classificacao_aprovado_chamada_1.pdf",
+      "files": [
+        "Arquivos Principais\\admissions-index.json",
+        "Arquivos Principais\\admissions\\usp-2026.json",
+        "Arquivos Principais\\coverage.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/enem_usp_2026_notas_minimas_classificacao_aprovado_chamada_1.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuv2018_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuv2018_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2023_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json",
+        "index.html"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1994_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1994_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1995_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1995_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1996_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1996_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1997_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1997_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1998_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1998_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_1999_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_1999_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2000_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2000_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2001_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2001_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2002_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2002_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2003_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2003_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2004_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2004_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2005_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2005_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2006_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2006_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2007_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2007_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2008_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2008_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2009_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2009_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2010_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2010_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2011_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2011_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2012_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2012_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2013_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2013_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2014_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2014_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2015_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2015_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2016_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2016_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2017_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2017_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2019_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2019_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_nota_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_nota_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_notas_minimas.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_notas_minimas.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_qase_inscritos_carreira.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\fuvest-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2024_qase_inscritos_carreira.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_notas_de_corte.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\data.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_notas_de_corte.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_qase_inscritos_carreira.pdf",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\fuvest-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2025_qase_inscritos_carreira.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.gov.br/acessoainformacao/pt-br/assuntos/recursos/recursos-a-cgu/mec/dp49152013.pdf",
+      "files": [
+        "Arquivos Principais\\enem-admissions.js"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.gov.br/acessoainformacao/pt-br/assuntos/recursos/recursos-a-cgu/mec/dp49152013.pdf",
+      "contentType": "application/pdf"
+    },
+    {
+      "url": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/sinopses-estatisticas/enem",
+      "files": [
+        "README.md"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/sinopses-estatisticas/enem",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem",
+      "files": [
+        "Arquivos Principais\\coverage.json",
+        "Arquivos Principais\\enem-stats.json"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem",
+      "contentType": "text/html;charset=utf-8"
+    },
+    {
+      "url": "https://www3.unicentro.br/vestibular/",
+      "files": [
+        "Arquivos Principais\\app.js"
+      ],
+      "status": 200,
+      "finalUrl": "https://www3.unicentro.br/vestibular/",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www3.unicentro.br/vestibular/sisu/cotas-pcd/",
+      "files": [
+        "Arquivos Principais\\admissions\\sisu-2025.json",
+        "Arquivos Principais\\admissions\\sisu-2026.json",
+        "Arquivos Principais\\app.js"
+      ],
+      "status": 404,
+      "error": "Not Found"
+    }
+  ]
+}

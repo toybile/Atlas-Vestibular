@@ -14,6 +14,7 @@
   else if(view==='enrollStates'||view==='enrollRegions'){label='Território';title='Inscritos por '+(view==='enrollStates'?'estado':'região');unit='inscritos';rows=Object.entries(e.registrations||{}).filter(([g])=>view==='enrollRegions'?regions.includes(g):!['Brasil','Exterior',...regions].includes(g)).map(([g,n])=>({label:g,code:g,cut:n,n,source:e.source,table:e.registrationTable||'1.1'}));note='Inscritos segundo a sinopse, independentemente da presença ou validade da nota. Não é taxa de participação da população residente.';}
   if(frequency){unit='%';scale=100}else if(unit==='inscritos'||s.statMetric==='n') {if(unit!=='inscritos')unit='participantes';scale=Math.max(1,...rows.map(r=>r.cut||0))*1.05}else if(s.statMetric==='sd')scale=Math.max(200,...rows.map(r=>r.cut||0))*1.1;
   if(+s.year<2009&&!fuvest)note=(e.notes||[]).join(' ')+' '+note;
+  if(!rows.length&&view==='distribution'&&area==='Redação'&&['2017','2018','2019'].includes(String(s.year)))note='A tabela oficial 7.5.2 contém faixas cuja soma diverge do total publicado. A distribuição de redação desta edição não foi incorporada como proporção por falta de um denominador validado. As medidas de desempenho da tabela 7.5.1 continuam disponíveis.';
   if(!rows.length)note=[...(e.notes||[]),note].filter(Boolean).join(' ');
   return {rows,title,label,unit,scale,frequency,countOnly:unit==='inscritos',ordered,note,area,metric:frequency?'Proporção':unit==='inscritos'?'Inscritos':metrics[s.statMetric],population:rows[0]?.n};
  }

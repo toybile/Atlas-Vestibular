@@ -2,7 +2,7 @@ from pathlib import Path
 import re,json,hashlib,html,zipfile,io,openpyxl,itertools,sys
 from pypdf import PdfReader
 sys.stdout.reconfigure(encoding='utf8')
-SITE=Path(__file__).resolve().parents[1];SRC=SITE.parent/'history-sources'
+SITE=(Path(__file__).resolve().parents[2]/'Arquivos Principais');SRC=SITE.parent.parent/'history-sources'
 def save(name,d):
  p=SITE/name;p.parent.mkdir(exist_ok=True,parents=True);p.write_text(json.dumps(d,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
