@@ -1,8 +1,8 @@
-# Cortes e Concorrência · FUVEST e ENEM
+# Atlas Vestibular
 
 Painel público para explorar notas de corte, concorrência e estatísticas da FUVEST e do ENEM, com identificação das fontes e das limitações de cada conjunto.
 
-[Acessar o site](https://toybile.github.io/FUVEST-Cortes-e-Concorrencia/). Atualização dos dados: 02/11/2026.
+[Acessar o site](https://toybile.github.io/atlas-vestibular/). Atualização dos dados: 02/11/2026.
 
 ## Organização
 
