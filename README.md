@@ -2,21 +2,21 @@
 
 Painel público para explorar notas de corte, concorrência e estatísticas da FUVEST e do ENEM, com identificação das fontes e das limitações de cada conjunto.
 
-[Acessar o site](https://toybile.github.io/atlas-vestibular/). Atualização dos dados: 02/11/2026.
+[Acessar o site](https://toybile.github.io/Atlas-Vestibular/). Atualização dos dados: 02/11/2026.
 
 ## Organização
 
-- `index.html`: entrada do site, mantida na raiz para compatibilidade com GitHub Pages.
-- `Arquivos Principais/`: interface, bases anuais, fontes tipográficas e bibliotecas usadas no navegador.
-- `Arquivos Auxiliares (AI)/tools/`: importadores, auditoria de links e verificação dos dados.
-- `Arquivos Auxiliares (AI)/reports/`: resultados e limites das verificações.
-- `Arquivos Auxiliares (AI)/sisu.json` e `enem-usp.json`: bases intermediárias dos importadores; não são carregadas pelo navegador.
+- `index.html`: entrada do site, na raiz para compatibilidade com GitHub Pages.
+- `assets/`: estilos (`css/`), scripts da interface (`js/`), fontes (`fonts/`), bibliotecas (`vendor/`) e ícone.
+- `data/`: bases carregadas pelo navegador, com os arquivos anuais em `admissions/`. `data/intermediate/` guarda extrações usadas na reconstrução, que o site não solicita.
+- `scripts/`: importadores, verificação dos dados, auditoria de links e abertura local.
+- `docs/`: notas sobre a reconstrução dos dados e relatórios de verificação em `reports/`.
 
 O site é estático e usa caminhos relativos, compatíveis com hospedagem em subdiretórios.
 
 ## Abrir localmente
 
-Dê dois cliques em `Abrir site.cmd`. O servidor atende apenas em `http://127.0.0.1:8767/`. Alternativa: `python -m http.server 8767 --bind 127.0.0.1`, nesta pasta. Abrir o HTML diretamente não permite carregar as bases.
+Dê dois cliques em `scripts/abrir-site.cmd`. O servidor atende apenas em `http://127.0.0.1:8767/`. Alternativa: `python -m http.server 8767 --bind 127.0.0.1`, nesta pasta. Abrir o HTML diretamente não permite carregar as bases.
 
 ## Cobertura real
 
@@ -62,28 +62,28 @@ Valores ausentes permanecem ausentes. Relatórios SiSU 2010–2018 não informam
 - SiSU: relatórios agregados obtidos no repositório público [maiakanegae/sisu-data](https://github.com/maiakanegae/sisu-data). Procedência, download e SHA-256 preservados. Nenhuma lista individual utilizada.
 - ENEM-USP: PDFs oficiais da primeira chamada. Página, classificação publicada, fonte e SHA-256 preservados por edição. Ausência de município explícito na unidade permanece null, sem atribuir automaticamente São Paulo.
 
-`Arquivos Principais/coverage.json` inventaria as edições e lacunas. `Arquivos Principais/admissions-index.json` direciona os arquivos anuais em `Arquivos Principais/admissions/`. Arquivos de origem estão na pasta irmã `../history-sources`, fora do servidor.
+`data/coverage.json` inventaria as edições e lacunas. `data/admissions-index.json` direciona os arquivos anuais em `data/admissions/`. Arquivos de origem estão na pasta irmã `../history-sources`, fora do servidor.
 
-Para reconstruir com as origens já baixadas e as dependências de `Arquivos Auxiliares (AI)/requirements-data.txt`, execute nesta ordem:
+Para reconstruir com as origens já baixadas e as dependências de `scripts/requirements.txt`, execute nesta ordem:
 
 ```text
-python "Arquivos Auxiliares (AI)/tools/import_data.py" --sources ../history-sources
-python "Arquivos Auxiliares (AI)/tools/import_enem_usp.py" --pdf ../history-sources/enem-usp-2026-chamada1.pdf
-python "Arquivos Auxiliares (AI)/tools/expand_history.py"
-python "Arquivos Auxiliares (AI)/tools/expand_admissions.py"
-python "Arquivos Auxiliares (AI)/tools/finalize_data.py"
-python "Arquivos Auxiliares (AI)/tools/import_sisu2026.py"
-node "Arquivos Auxiliares (AI)/tools/verify_data.cjs"
+python "scripts/import_data.py" --sources ../history-sources
+python "scripts/import_enem_usp.py" --pdf ../history-sources/enem-usp-2026-chamada1.pdf
+python "scripts/expand_history.py"
+python "scripts/expand_admissions.py"
+python "scripts/finalize_data.py"
+python "scripts/import_sisu2026.py"
+node "scripts/verify_data.cjs"
 ```
 
 Os importadores não fazem downloads nem enviam arquivos. A verificação confere totais por território, partições e denominadores, ausência de estimativas nos campos históricos, identificadores e coexistência de processos no mesmo ano.
 
-Dependências de exportação locais: jsPDF e Lato, com licenças em `Arquivos Principais/vendor/` e `Arquivos Principais/fonts/`. Interface independente, sem vínculo institucional com USP, FUVEST, MEC ou Inep. Não estima aprovação.
+Dependências de exportação locais: jsPDF e Lato, com licenças em `assets/vendor/` e `assets/fonts/`. Interface independente, sem vínculo institucional com USP, FUVEST, MEC ou Inep. Não estima aprovação.
 
 
 ### Atualização das fontes — 02/11/2026
 
-- SiSU 2026: relatório oficial da chamada regular obtido diretamente do portal MEC, com 62.567 registros de oferta/modalidade (7.390 em AC). Importação reproduzível em `Arquivos Auxiliares (AI)/tools/import_sisu2026.py`; arquivo original e URL preservados em `../history-sources/`. O campo `EDICAO=302` é identificador interno, e não o ano; 2026 é identificado pelo relatório e dicionário.
+- SiSU 2026: relatório oficial da chamada regular obtido diretamente do portal MEC, com 62.567 registros de oferta/modalidade (7.390 em AC). Importação reproduzível em `scripts/import_sisu2026.py`; arquivo original e URL preservados em `../history-sources/`. O campo `EDICAO=302` é identificador interno, e não o ano; 2026 é identificado pelo relatório e dicionário.
 - Fonte de descoberta: https://sisu.mec.gov.br/static/pdf/json_arquivos.json . Notas, vagas, inscrições, modalidades e zeros originais preservados. Não é o processo SiSU+.
 - ENEM-USP: a Pró-Reitoria de Graduação da USP confirma início no ingresso de 2023, em substituição ao SiSU na USP: https://prg.usp.br/estude-na-usp/sisu/ . A primeira edição não deve ser confundida com o primeiro ano que tem dados finais validados nesta base (2024).
 - Pesquisa de 2023: o Jornal da USP descreve tabelas referenciais dinâmicas, publicadas antes da chamada regular e da conclusão das mudanças de curso. Elas não foram importadas como resultados finais: https://jornal.usp.br/universidade/enem-usp-candidatos-podem-consultar-indicacao-de-nota-minima-e-alterar-opcao-de-curso/ . Isso indica uma lacuna de validação desta base, não prova que a tabela final nunca tenha sido publicada.
@@ -91,7 +91,7 @@ Dependências de exportação locais: jsPDF e Lato, com licenças em `Arquivos P
 
 ## Auditoria de links
 
-Os endereços externos únicos das bases, interface e documentação são verificados pelo script `Arquivos Auxiliares (AI)/tools/audit_links.py`. O resultado, com data, resposta HTTP e arquivo de origem, fica em `Arquivos Auxiliares (AI)/reports/links.json`. Uma resposta bem-sucedida comprova acesso no momento da consulta, não a equivalência ou validade de todo o conteúdo. Bloqueios HTTP 403 e falhas temporárias de conexão são distinguidos de páginas 404.
+Os endereços externos únicos das bases, interface e documentação são verificados pelo script `scripts/audit_links.py`. O resultado, com data, resposta HTTP e arquivo de origem, fica em `docs/reports/links.json`. Uma resposta bem-sucedida comprova acesso no momento da consulta, não a equivalência ou validade de todo o conteúdo. Bloqueios HTTP 403 e falhas temporárias de conexão são distinguidos de páginas 404.
 
 O endereço de cotas PcD da UNICENTRO citado literalmente nos relatórios SiSU 2025/2026 retornou 404. A transcrição original é preservada e o detalhe apresenta acesso ao portal atual da instituição. O Jornal da USP pode restringir consultas automatizadas. O arquivo Inep 2017 pode apresentar falhas temporárias; sua referência oficial é mantida.
 

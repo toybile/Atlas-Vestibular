@@ -1,5 +1,5 @@
 $ErrorActionPreference='Stop'
-$siteRoot=$PSScriptRoot
+$siteRoot=Split-Path $PSScriptRoot -Parent
 $url='http://127.0.0.1:8767/'
 $ready=$false
 try{ $page=Invoke-WebRequest $url -TimeoutSec 3 -UseBasicParsing; $ready=$page.Content -match 'enem-section' }catch{}

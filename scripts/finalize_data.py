@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,re
-site=(Path(__file__).resolve().parents[2]/'Arquivos Principais');s=site.parent.parent/'history-sources';p=s/'enem-report-2008.txt';
+site=(Path(__file__).resolve().parents[1]/'data');s=site.parent.parent/'history-sources';p=s/'enem-report-2008.txt';
 if not p.exists():
  from pypdf import PdfReader
  p.write_text('\n'.join(pg.extract_text() for pg in PdfReader(s/'enem-report-2008.pdf').pages),encoding='utf8')
@@ -32,7 +32,7 @@ for year,process,name,source,note in [('2023','enem-usp','ENEM-USP','https://www
 
 from pathlib import Path
 import json
-site=(Path(__file__).resolve().parents[2]/'Arquivos Principais');p=site/'fuvest-stats.json';d=json.loads(p.read_text(encoding='utf8'))
+site=(Path(__file__).resolve().parents[1]/'data');p=site/'fuvest-stats.json';d=json.loads(p.read_text(encoding='utf8'))
 mapregs={'Norte':'AC AM AP PA RO RR TO','Nordeste':'AL BA CE MA PB PE PI RN SE','Centro-Oeste':'DF GO MS MT','Sudeste':'ES MG RJ SP','Sul':'PR RS SC'}
 for y,e in d.items():
  q=next((q for q in e['questions'].values() if 'Estado da Federação' in q['title']),None)

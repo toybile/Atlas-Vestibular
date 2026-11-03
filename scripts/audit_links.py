@@ -1,9 +1,9 @@
 """Audit public source URLs without downloading full datasets or PDF bodies."""
 from pathlib import Path
 import concurrent.futures,json,re,urllib.request,urllib.error,time
-ROOT=Path(__file__).resolve().parents[2]
-SITE=ROOT/'Arquivos Principais'
-REPORT=ROOT/'Arquivos Auxiliares (AI)'/'reports'
+ROOT=Path(__file__).resolve().parents[1]
+DATA=ROOT/'data';ASSETS=ROOT/'assets'
+REPORT=ROOT/'docs'/'reports'
 urls={}
 def walk(value,origin):
  if isinstance(value,dict):
@@ -13,9 +13,10 @@ def walk(value,origin):
  elif isinstance(value,str):
   for u in re.findall(r'https?://[^\s<>"\\]+',value):
    u=u.rstrip(".,;)");urls.setdefault(u.split('#')[0],set()).add(origin)
-for p in SITE.rglob('*.json'):
+for p in DATA.rglob('*.json'):
+ if 'intermediate' in p.parts:continue
  walk(json.loads(p.read_text(encoding='utf8')),str(p.relative_to(ROOT)))
-for p in [ROOT/'index.html',ROOT/'README.md',*SITE.glob('*.js'),*SITE.glob('*.css')]:
+for p in [ROOT/'index.html',ROOT/'README.md',*(ASSETS/'js').glob('*.js'),*(ASSETS/'css').glob('*.css')]:
  for u in re.findall(r'https?://[^\s<>"\\]+',p.read_text(encoding='utf8')):
   u=u.split("'")[0].rstrip('.,;)`');urls.setdefault(u.split('#')[0],set()).add(str(p.relative_to(ROOT)))
 def check_once(item, retry=False):

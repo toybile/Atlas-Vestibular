@@ -1,7 +1,7 @@
 """Import the official 2026 regular-call report without inferring missing values."""
 from pathlib import Path
 import sys,json,hashlib,math
-SITE=(Path(__file__).resolve().parents[2]/'Arquivos Principais')
+SITE=(Path(__file__).resolve().parents[1]/'data')
 sys.path.insert(0,str(SITE.parent.parent/'data-deps'))
 import openpyxl
 src=SITE.parent.parent/'history-sources'/'sisu-2026.xlsx'
