@@ -10,13 +10,14 @@
   const wrap=(str,width,size=10)=>{doc.setFont('Lato','normal');doc.setFontSize(size);return doc.splitTextToSize(String(str??''),width)};
   const line=(x1,y1,x2,y2,color=C.line,width=.7)=>{doc.setDrawColor(color);doc.setLineWidth(width);doc.line(x1,y1,x2,y2)};
   const rect=(x,y,w,h,color,r=0)=>{doc.setFillColor(color);if(r)doc.roundedRect(x,y,w,h,r,r,'F');else doc.rect(x,y,w,h,'F')};
+  const byRatio=!stats&&s.ranking==='ratio',peak=byRatio?Math.max(0,...s.rows.map(r=>r.metric)):0;
   const metric=stats?s.metricName:s.ranking==='ratio'?(sisu?'Inscrições por vaga':'Inscritos por vaga'):'Maiores cortes';
   const subtitle=`${s.exam} ${s.editionLabel||s.year} / ${s.mode} · ${stats?s.modeName:metric}`;
   function header(){rect(M,25,23,3,C.violet);text(s.exam+' · '+(stats?'ESTATÍSTICAS E PERFIL':'CORTES E CONCORRÊNCIA'),M+32,31,8,C.violet,true);text(wrap(stats?(s.statTitle||s.metricName+' por área'):sisu&&s.process!=='sisu'?(kind==='chart'?'Notas publicadas por processo':'Tabela de notas publicadas'):kind==='chart'?'Notas de corte em perspectiva':'Tabela de notas de corte',W-2*M,19).slice(0,2),M,56,19,C.ink,true);text(subtitle,M,99,10,C.muted);text(`${s.rows.length} ${stats?'registros':sisu?'ofertas':'carreiras'}${stats?'':' · Top '+s.count+(s.ties?' com empates':'')}`,M,114,9,C.muted);const filters=wrap([s.filters,s.search?'Busca: '+s.search:'',s.referenceLabel].filter(Boolean).join(' · '),W-2*M,8);text(filters.slice(0,2),M,128,8,C.muted);line(M,145,R,145)}
   header();let y=155;const plotX=365,plotEnd=R-90,plotW=plotEnd-plotX;
   const tableHeads=s.presentation?s.presentation.columns.map(c=>c.label):stats?(s.countOnly?['Pos.',s.statLabel||'Território','Inscritos']:s.frequency?['Pos.',s.statLabel||'Categoria','Proporção','Contagem','População (n)']:['Pos.',s.statLabel||'Área',s.metricName,'n','Mediana','Mín.','Máx.','DP']):sisu?['Pos.','Curso / oferta','Processo / ano','Modalidade','Pontos','Inscrições/vaga','Vagas','Inscrições']:['Pos.',sisu?'Curso / oferta':'Carreira','Pontos',s.questions?'% escala':'Unidade',sisu?'Inscrições/vaga':'Inscritos/vaga','Vagas',sisu?'Inscrições':'Inscritos'];
   const widths=s.presentation?(()=>{const n=tableHeads.length,label=n>8?220:290;return [30,label,...Array(n-2).fill((W-2*M-30-label)/(n-2))]})():stats&&s.countOnly?[30,430,W-2*M-460]:stats&&s.frequency?[30,330,130,130,W-2*M-620]:sisu?[30,230,95,70,70,100,75,W-2*M-670]:stats?[30,230,80,105,85,75,75,W-2*M-680]:[30,290,65,65,105,80,W-2*M-635];let xs=[M];widths.forEach(w=>xs.push(xs.at(-1)+w));
-  function axis(){text(stats?(s.statLabel||'Área').toUpperCase():sisu?'CURSO / OFERTA':'POS. / CARREIRA',M,y,8,C.muted,true);for(let i=0;i<=4;i++)text(s.axis==='pct'?i*25+'%':fmt(i*s.scale/4,s.scale>10000?0:1),plotX+plotW*i/4,y,8,C.muted,false,{align:i===0?'left':i===4?'right':'center'});text(stats?'VALOR':'CORTE',R,y,8,C.muted,true,{align:'right'});y+=20}
+  function axis(){text(stats?(s.statLabel||'Área').toUpperCase():sisu?'CURSO / OFERTA':'POS. / CARREIRA',M,y,8,C.muted,true);for(let i=0;i<=4;i++)text(byRatio?fmt(i*peak/4,1):s.axis==='pct'?i*25+'%':fmt(i*s.scale/4,s.scale>10000?0:1),plotX+plotW*i/4,y,8,C.muted,false,{align:i===0?'left':i===4?'right':'center'});text(stats?'VALOR':byRatio?'POR VAGA':'CORTE',R,y,8,C.muted,true,{align:'right'});y+=20}
   // Center a whole text block, not just its first baseline.
   function centeredBlock(lines,x,centerY,size,color,bold=false,align='left'){
    const block=Array.isArray(lines)?lines:[String(lines)],leading=size*1.3;
@@ -31,7 +32,8 @@
   s.rows.forEach((r,index)=>{
    const presentation=s.presentation?.rows[index];
    const label=wrap(presentation?presentation.cells[1]+(kind==='chart'&&sisu?' · '+r.processName+' '+r.year+' / '+r.mode:''):r.label+(sisu&&r.subtitle?' · '+r.subtitle:''),kind==='chart'?plotX-M-54:widths[1]-14,10);
-   const details=kind==='chart'?wrap(presentation?presentation.details.join(' · '):stats?'n = '+fmt(r.n,0):'',plotX-M-54,8):[];
+   const detailText=kind==='chart'?(presentation?presentation.details.join(' · '):stats?'n = '+fmt(r.n,0):''):'';
+   const details=detailText?wrap(detailText,plotX-M-54,8):[];
    const labelHeight=label.length*13,detailHeight=details.length*10;
    const cellHeight=presentation&&kind!=='chart'?Math.max(...presentation.cells.map((v,i)=>wrap(v,widths[i]-14,i===1?10:9).length*(i===1?13:12))):0;
    const height=Math.max(36,kind==='chart'?labelHeight+detailHeight+(details.length?22:14):Math.max(labelHeight,cellHeight)+18);
@@ -44,10 +46,10 @@
     centeredBlock(label,M+28,labelCenter,10,C.ink);
     if(details.length)centeredBlock(details,M+28,cy+(labelHeight+6)/2,8,C.muted);
     for(let i=0;i<=4;i++)line(plotX+plotW*i/4,y-6,plotX+plotW*i/4,y+height-6,C.line,.5);
-    rect(plotX,cy-4.5,plotW,9,C.pale,3);if(r.pct>0)rect(plotX,cy-4.5,plotW*Math.min(100,r.pct)/100,9,C.violet,3);
-    if(s.reference!==null){doc.setLineDashPattern([3,3],0);line(plotX+plotW*s.reference/100,y-6,plotX+plotW*s.reference/100,y+height-6,C.orange,1.1);doc.setLineDashPattern([],0)}
-    centeredBlock(s.axis==='pct'?fmt(r.pct)+'%':fmt(r.cut,stats&&s.metric==='n'?0:Number.isInteger(r.cut)?0:2),R,cy-6.5,11,C.ink,true,'right');
-    centeredBlock(s.axis==='pct'?fmt(r.cut,0)+'/'+s.questions:s.unit,R,cy+8.5,8,C.muted,false,'right');
+    rect(plotX,cy-4.5,plotW,9,C.pale,3);const barPct=byRatio?r.metric/peak*100:r.pct;if(barPct>0)rect(plotX,cy-4.5,plotW*Math.min(100,barPct)/100,9,C.violet,3);
+    if(s.reference!==null&&!byRatio){doc.setLineDashPattern([3,3],0);line(plotX+plotW*s.reference/100,y-6,plotX+plotW*s.reference/100,y+height-6,C.orange,1.1);doc.setLineDashPattern([],0)}
+    centeredBlock(byRatio?fmt(r.metric,2):s.axis==='pct'?fmt(r.pct)+'%':fmt(r.cut,stats&&s.metric==='n'?0:Number.isInteger(r.cut)?0:2),R,cy-6.5,11,C.ink,true,'right');
+    centeredBlock(byRatio?'corte '+fmt(r.cut,Number.isInteger(r.cut)?0:2):s.axis==='pct'?fmt(r.cut,0)+'/'+s.questions:s.unit,R,cy+8.5,8,C.muted,false,'right');
    }else{
     const values=presentation?presentation.cells:stats?(s.countOnly?[r.rank,'',fmt(r.cut,0)]:s.frequency?[r.rank,'',fmt(r.cut,2)+'%',fmt(r.count,0),fmt(r.n,0)]:[r.rank,'',fmt(r.cut,s.metric==='n'?0:2),fmt(r.n,0),fmt(r.median,2),fmt(r.min,2),fmt(r.max,2),fmt(r.sd,2)]):sisu?[r.rank,'',(r.processName||'SiSU')+' '+(r.year||s.year)+(r.semester?' / '+r.semester:''),r.mode||s.mode,fmt(r.cut,2),fmt(ratio(r),2),fmt(r.vacancies,0),fmt(r.applicants,0)]:[r.rank,'',fmt(r.cut,Number.isInteger(r.cut)?0:2),s.questions?fmt(r.pct)+'%':'pontos',fmt(ratio(r),2),fmt(r.vacancies,0),fmt(r.applicants,0)];
     const cy=y+height/2-6;

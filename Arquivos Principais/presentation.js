@@ -27,7 +27,7 @@
   if(sisu)fixed.push(field('process','Processo / edição',r=>r.processName+' '+r.year+(r.semester?' / '+r.semester:'')),field('mode','Modalidade',r=>r.mode));
   const metric=field('cut',stats?s.metricName:s.axis==='pct'?'Corte (% da escala)':'Corte ('+s.unit+')',r=>!stats&&s.axis==='pct'?r.pct:r.cut,stats?(s.countOnly?0:2):s.axis==='pct'?1:2);
   if(s.frequency)metric.label='Proporção (%)';
-  fixed.push(metric);
+  fixed.push(metric);if(!stats&&s.ranking==='ratio'&&!resolved.selected.some(f=>f.id==='ratio'))fixed.push(field('ratio',sisu?'Inscrições/vaga':'Inscritos/vaga',ratio,2));
   if(stats&&!s.countOnly)fixed.push(field('population','População (n)',r=>r.n));
   const columns=[...fixed,...resolved.selected.filter(f=>!(f.id==='percent'&&s.axis==='pct'))];
   const chartDetails=r=>[

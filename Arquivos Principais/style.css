@@ -323,3 +323,5 @@ dialog>.close-dialog{z-index:2;right:13px;top:10px;background:var(--surface);bor
 .presentation-actions button:focus-visible,.presentation-presets input:focus-visible,.presentation-field input:focus-visible,#presentation-choices>summary:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
 @media(max-width:620px){.chart-view-controls{width:100%;justify-content:space-between;gap:8px}.chart-head .chart-view-controls .view-mode{align-self:center}#customize-view{padding-left:0;font-size:calc(11px * var(--text-scale))}#presentation-state{font-size:calc(9px * var(--text-scale))}.row-extra{font-size:calc(10px * var(--text-scale));gap:3px 12px}}
 @media(max-width:400px){.presentation-presets,#presentation-fields{grid-template-columns:1fr}.presentation-presets label{padding:12px}#presentation-dialog h2{font-size:calc(22px * var(--text-scale))}.presentation-actions button{padding:10px;font-size:calc(12px * var(--text-scale))}}
+html.booting #brand-name,html.booting .page-heading>div>*,html.booting #data-seal-text,html.loading #data-seal-text{visibility:hidden}
+.chart-loading{margin:0;padding:48px 16px;text-align:center;color:var(--muted)}
