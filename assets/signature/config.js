@@ -1,0 +1,1 @@
+window.ToybileSignatureConfig={getScheme:()=>document.documentElement.dataset.theme||'light',setScheme:s=>{if((document.documentElement.dataset.theme||'light')!==s)document.querySelector('#theme').click();}};
